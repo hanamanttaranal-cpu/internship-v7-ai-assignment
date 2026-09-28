@@ -179,7 +179,6 @@ Expected:
 ```
 
 ---
-<img width="560" height="714" alt="myphoto jpg" src="https://github.com/user-attachments/assets/68c246d3-12c2-4d66-a2b4-29dcf187076c" />
 
 
 # 5. SSH Hardening
