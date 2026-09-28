@@ -1,0 +1,50 @@
+version: '3.8'
+
+networks:
+  v7_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+services:
+  vm1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vm1
+    hostname: vm1
+    ports:
+      - "2221:22"
+      - "80:80"
+      - "443:443"
+    networks:
+      v7_net:
+        ipv4_address: 172.20.0.2
+    restart: unless-stopped
+
+  vm2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vm2
+    hostname: vm2
+    ports:
+      - "2222:22"
+    networks:
+      v7_net:
+        ipv4_address: 172.20.0.3
+    restart: unless-stopped
+
+  vm3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vm3
+    hostname: vm3
+    ports:
+      - "2223:22"
+    networks:
+      v7_net:
+        ipv4_address: 172.20.0.4
+    restart: unless-stopped
