@@ -1,0 +1,20 @@
+cat << 'EOF' > .gitignore
+# Secrets & Private Keys
+*.key
+*.pem
+*.pub
+.vault_pass
+id_rsa*
+ssl/*.key
+
+# Ansible Runtime & Logs
+*.retry
+*.log
+.ansible/
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+EOF
