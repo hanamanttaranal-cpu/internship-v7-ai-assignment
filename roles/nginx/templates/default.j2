@@ -1,0 +1,44 @@
+{% if inventory_hostname == 'vm1' %}
+upstream backend_app {
+    server vm2:80 max_fails=1 fail_timeout=5s;
+    server vm3:80 max_fails=1 fail_timeout=5s;
+}
+
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    server_name _;
+
+    location / {
+        default_type text/html;
+        return 200 '<!DOCTYPE html>\n<html>\n<head><title>Node Status</title></head>\n<body>\n  <h1>Server Node: $hostname</h1>\n  <p>Current System Time: $time_local</p>\n</body>\n</html>\n';
+    }
+
+    location /vm2/ {
+        proxy_pass http://vm2/;
+    }
+
+    location /vm3/ {
+        proxy_pass http://vm3/;
+    }
+
+    location /app/ {
+        proxy_pass http://backend_app/;
+        proxy_connect_timeout 2s;
+        proxy_read_timeout 2s;
+    }
+}
+{% else %}
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    server_name _;
+
+    location / {
+        default_type text/html;
+        return 200 '<!DOCTYPE html>\n<html>\n<head><title>Node Status</title></head>\n<body>\n  <h1>Server Node: $hostname</h1>\n  <p>Current System Time: $time_local</p>\n</body>\n</html>\n';
+    }
+}
+{% endif %} 

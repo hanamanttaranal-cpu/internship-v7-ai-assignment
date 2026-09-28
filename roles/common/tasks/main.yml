@@ -1,0 +1,36 @@
+---
+# Common Role: User creation, Sudoers configuration & Base packages
+- name: Ensure ansible_user group exists
+  group:
+    name: ansible_user
+    state: present
+
+- name: Ensure ansible_user exists with secure password
+  user:
+    name: ansible_user
+    group: ansible_user
+    shell: /bin/bash
+    password: "{{ vault_ansible_user_password }}"
+    state: present
+
+- name: Grant ansible_user sudo privileges via dedicated sudoers file
+  copy:
+    dest: /etc/sudoers.d/ansible_user
+    content: "ansible_user ALL=(ALL) NOPASSWD:ALL\n"
+    owner: root
+    group: root
+    mode: '0440'
+    validate: 'visudo -cf %s'
+
+- name: Update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install required base packages (curl, git, docker)
+  apt:
+    name:
+      - curl
+      - git
+      - docker.io
+    state: present    

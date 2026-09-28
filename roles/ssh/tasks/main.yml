@@ -1,0 +1,10 @@
+---
+- name: Ensure SSH server package is installed
+  apt:
+    name: openssh-server
+    state: present
+- name: Ensure SSH service is running and enabled
+  service:
+    name: ssh
+    state: started
+    enabled: yes  

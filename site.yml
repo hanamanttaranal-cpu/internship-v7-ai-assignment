@@ -1,0 +1,9 @@
+---
+- name: Apply common Base Setup and Hardening across all nodes
+  hosts: all
+  become: true
+  roles:
+    - common
+    - ssh
+    - nginx
+
