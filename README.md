@@ -597,6 +597,7 @@ curl -k https://public.vm1.local/app
 ```
 
 ---
+![image alt](https://github.com/hanamanttaranal-cpu/internship-v7-ai-assignment/blob/b68e386ace081a7596bcacdb48a6ac358faab6fe/Screenshot%202026-09-29%20114933.png)
 
 # 19. Project Directory
 
