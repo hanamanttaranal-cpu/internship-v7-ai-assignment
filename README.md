@@ -196,7 +196,7 @@ Security configuration includes:
 * Password login rejection tested
 
 Example SSH connection:
-
+![image alt](https://github.com/hanamanttaranal-cpu/internship-v7-ai-assignment/blob/10780e2069484e35f3a2961ccbe1eac61fc51fbf/Screenshot%202026-09-29%20111208.png)
 ```bash
 ssh -p 2221 <user>@localhost
 ```
