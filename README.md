@@ -356,7 +356,7 @@ The repository must never contain:
 * Plaintext passwords
 * Vault passwords
 * Other sensitive credentials
-
+![image alt](https://github.com/hanamanttaranal-cpu/internship-v7-ai-assignment/blob/5374be4b8d05ea393aedecd4d3f79a3f9b1420af/Screenshot%202026-09-29%20114041.png)
 ---
 
 # 12. Common Server Configuration
