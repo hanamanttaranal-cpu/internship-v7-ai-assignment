@@ -156,8 +156,6 @@ Check container IP addresses:
 docker inspect -f '{{.Name}} -> {{(index .NetworkSettings.Networks "vm_net").IPAddress}}' vm1 vm2 vm3
 ```
 
-Expected:
-
 ```text
 /vm1 -> 172.28.0.11
 /vm2 -> 172.28.0.12
@@ -272,7 +270,6 @@ Nginx provides HTTPS access on VM1.
 
 HTTP traffic is redirected to HTTPS.
 
-Example:
 
 ```text
 http://public.vm1.local
@@ -292,7 +289,6 @@ Because this is a local assessment environment, a self-signed certificate is use
 
 Ansible is used to automate configuration of all three containers.
 
-Example inventory:
 
 ```text
 [servers]
@@ -309,8 +305,6 @@ Connectivity is tested with:
 ```bash
 ansible all -m ping
 ```
-
-Expected result:
 
 ```text
 vm1 | SUCCESS
@@ -342,7 +336,6 @@ ansible/
 
 Sensitive information is stored using Ansible Vault.
 
-Example:
 
 ```bash
 ansible-vault create group_vars/all/vault.yml
@@ -388,6 +381,7 @@ Each backend provides a dynamic page showing information such as:
 This allows load balancing and failover to be demonstrated clearly.
 
 Example:
+![image alt](https://github.com/hanamanttaranal-cpu/internship-v7-ai-assignment/blob/576db8cdc67244ee089038c37cb0e36a68d485e9/Screenshot%202026-09-29%20114441.png)
 
 ```text
 Backend Server: vm2
