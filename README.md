@@ -258,6 +258,7 @@ Example:
 172.28.0.12    public.vm2.local
 172.28.0.13    public.vm3.local
 ```
+![image alt](https://github.com/hanamanttaranal-cpu/internship-v7-ai-assignment/blob/f3146d1cc96a19757f0046302640b21f32f4bfa9/Screenshot%202026-09-29%20111744.png)
 
 The hostnames are then used for testing SSH and web access.
 
