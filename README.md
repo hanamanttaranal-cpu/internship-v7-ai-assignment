@@ -694,7 +694,7 @@ The video demonstrates:
 
 Demo Video:
 
-**[Add Google Drive video link here]**
+**[https://drive.google.com/drive/u/1/folders/1q6--3mDxAjIMXMX-Al1pAKGOdf6da4wB]**
 
 Make sure the Google Drive sharing permission is:
 
