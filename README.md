@@ -300,6 +300,7 @@ vm1
 vm2
 vm3
 ```
+![image alt](https://github.com/hanamanttaranal-cpu/internship-v7-ai-assignment/blob/f0f9aecad1c4e1b183757e832faca520a360f730/Screenshot%202026-09-29%20113622.png)
 
 Ansible is configured to connect to the containers using SSH keys.
 
