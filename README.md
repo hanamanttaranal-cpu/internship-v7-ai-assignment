@@ -179,6 +179,7 @@ Expected:
 ```
 
 ---
+https://github.com/hanamanttaranal-cpu/internship-v7-ai-assignment/blob/8071de5b5282d3f2ee8294dceefe54fbc98a1bf8/Screenshot%202026-09-28%20203528.png
 
 
 # 5. SSH Hardening
